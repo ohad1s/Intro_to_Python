@@ -28,6 +28,18 @@ for row in games_data:
 print("Israel Goals: ", Isr_goals_counter)
 print("Israel Games: ", Isr_games_counter)
 print("Israel avg goal per game: ", Isr_goals_counter/Isr_games_counter)
+print(header)
+# FIFA World Cup
+WC_goals_isr=0
+WC_games_isr=0
+for row in games_data:
+    if row[5]=="FIFA World Cup":
+        if row[1]=='Israel':
+            WC_goals_isr+=(int(row[3]))
+        if row[2]=="Israel":
+            WC_goals_isr+=(int(row[4]))
+print("Israel scored {} goals on WC".format(WC_goals_isr))
+
 
 
 

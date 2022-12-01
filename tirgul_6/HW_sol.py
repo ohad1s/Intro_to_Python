@@ -21,15 +21,14 @@ def isPrime(number):
     for x in range(2,number):
         if number%x==0:
             return False
-    else:
-        return True
+    return True
 
 def isMarsennePrime(n):
     if isPrime(n)==False:
         return False
     else:
         for i in range(n):  #  2 ^ i - 1 == n ??
-          if (math.pow(2, i) == n+1):
+          if (2**i == n+1):
              return True
         return False
 
