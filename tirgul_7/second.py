@@ -87,6 +87,15 @@ def isSphenic(number):
 
 print(isSphenic(70))
 
+s="Hello World"
+k=3
+mydict={}
+for i in range(0,len(s)-k+1):
+    substring=s[i:i+k]
+    mydict[substring]=[i,i+k]
+print(mydict)
+
+
 
 
 
