@@ -55,15 +55,21 @@ f= open("Barbie.txt","r")
 lines=f.readlines()
 barbie_prices={}
 for i in range(1,len(lines)):
-    name, price = lines[i].split("\t")
-    barbie_prices[name]=price
+    name,price =lines[i].split("    ")
+    price=price.rstrip("\n")
+    barbie_prices[name]=int(price)
 
 print(barbie_prices)
 
-
-
-
-
+# def mul_vec(vec,scalar):
+#     mul_scalar=[]
+#     for i in range(0,len(vec)):
+#         mul_scalar.append(vec[i]*scalar)
+#     return mul_scalar
+# vec=input("wefefewr").split(" ")
+#
+# x= mul_vec(vec,2)
+# print(x)
 
 
 
