@@ -14,11 +14,11 @@ import random
 # print(line)
 # myfile= open("class.txt", "a")
 # myfile.write("Neta")
-# myfile= open("blabla.txt", "r+")
-# for i in range(200):
-#     myInt=str(random.randint(1,1000))
-#     myfile.write(myInt)
-#     myfile.write("\n")
+myfile= open("blabla.txt", "r+")
+for i in range(200):
+    myInt=str(random.randint(1,1000))
+    myfile.write(myInt)
+    myfile.write("\n")
 # for i in range(1,200):
 #     line=myfile.readline()
 #     if i==12:
