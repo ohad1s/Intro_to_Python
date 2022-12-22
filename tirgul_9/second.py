@@ -72,8 +72,38 @@ def rev_rec(my_str):
         return my_str
     return my_str[-1]+rev_rec(my_str[0:-1])
 
-def valueDigit(num,d):
-   # פתרון לכם חייב#
+def value_of_digit(number,digit): #solution with string
+    number_str = str(number)
+    if number_str=="":
+        return 0
+    last_char = number_str[-1]
+    if last_char == str(digit):
+        return 1
+    return 10 * value_of_digit(number_str[:-1], digit)
+
+
+def value_of_digit_2(number, digit): # without converting to string
+    if number==0 and digit==0:
+        return 1
+    if number == 0:
+        return 0
+    if number % 10 == digit:
+        return 1
+    return 10 * value_of_digit_2(number // 10, digit)
+
+print(value_of_digit_2(585, 5))  # Output: 1
+print(value_of_digit_2(342, 4))  # Output: 10
+print(value_of_digit_2(572, 5))  # Output: 100
+print(value_of_digit_2(1942, 8))  # Output: 0
+print(value_of_digit_2(1902, 0))  # Output: 10
+print(value_of_digit_2(1920, 0))  # Output: 1
+print(value_of_digit_2(0, 1))  # Output: 0
+print(value_of_digit_2(0, 0))  # Output: 0
+
+
+
+
+
 
 
 
