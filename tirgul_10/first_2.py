@@ -31,6 +31,7 @@ class Student():
 
 s1=Student("Ohad","123456789",25)
 print(s1)
+print(type(s1))
 print(s1.id)
 s2=Student("Michael", "123456788", 24)
 print(s2)
