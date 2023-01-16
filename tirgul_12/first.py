@@ -80,21 +80,23 @@ class Line():
 # new_list= sorted(my_list)
 # print("new_list", new_list)
 
+# p1=Point(5,7)
+# p2=Point(3,2)
+# print(p1+p2)
+# p3= p1+p2
+# print(p3)
+# print(p3==p1)
+# p4=(p3**2)
+# points_list=[p1,p2,p3,p4]
+# points_list.sort()
+# print(points_list)
+# sorted_points= sorted(points_list,key=lambda p:(p.x,p.y),reverse=True)
+# string_list= ["dasfs","ehkfgewkfgeklfgwekf","Fafsf","fdsffFSFS","FDSFDSAF","SDFDSKGFKGFEf"]
+# sorted_strings= sorted(string_list,key=lambda my_string:len(my_string))
+# print(sorted_strings)
+# sorted_strings2= sorted(string_list,key=len)
+# print(sorted_strings2)
 p1=Point(5,7)
-p2=Point(3,2)
-print(p1+p2)
-p3= p1+p2
-print(p3)
-print(p3==p1)
-p4=(p3**2)
-points_list=[p1,p2,p3,p4]
-points_list.sort()
-print(points_list)
-sorted_points= sorted(points_list,key=lambda p:(p.x,p.y),reverse=True)
-string_list= ["dasfs","ehkfgewkfgeklfgwekf","Fafsf","fdsffFSFS","FDSFDSAF","SDFDSKGFKGFEf"]
-sorted_strings= sorted(string_list,key=lambda my_string:len(my_string))
-print(sorted_strings)
-sorted_strings2= sorted(string_list,key=len)
-print(sorted_strings2)
+l1= Line(p1,2,9)
 
 
