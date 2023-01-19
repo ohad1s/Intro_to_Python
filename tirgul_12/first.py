@@ -10,21 +10,21 @@ class Point():
         return f"({self.x},{self.y})"
 
     def distance(self,other_point):
-        x_s= (self.x - other_point.x)**2
-        y_s = (self.y - other_point.y)**2
+        x_s= (self.x - other_point.__x) ** 2
+        y_s = (self.y - other_point.__y) ** 2
         return math.sqrt(x_s + y_s)
 
     def __add__(self, other):
-        return Point(self.x+other.x , self.y+other.y)
+        return Point(self.x + other.__x, self.y + other.__y)
 
     def __eq__(self, other):
-        return self.x==other.x and self.y==other.y
+        return self.x == other.__x and self.y == other.__y
 
     def __pow__(self, power):
         return Point(self.x**power,self.y**power)
 
     def __lt__(self, other):
-        return (self.x+self.y)/2 < (other.x+other.y)/2
+        return (self.x+self.y) / 2 < (other.__x + other.__y) / 2
 
 
 
@@ -36,22 +36,22 @@ class Line():
         self.point2=Point(x,y)
 
     def slope(self):
-        return (self.point1.y-self.point2.y)/(self.point1.x-self.point2.x)
+        return (self.point1.__y - self.point2.y) / (self.point1.__x - self.point2.x)
 
     def n(self):
-        return self.point1.y-(self.slope()*self.point1.x)
+        return self.point1.__y - (self.slope() * self.point1.__x)
 
     def __repr__(self):
         return f"y={self.slope()}x+{self.n()}"
 
     def is_on_line(self,other_point):
-        x_max= max(self.point1.x, self.point2.x)
-        y_max= max(self.point1.y, self.point2.y)
-        y_min= min(self.point1.y, self.point2.y)
-        x_min= min(self.point1.x, self.point2.x)
-        if x_min <= other_point.x <= x_max:
-            if y_min <= other_point.y <= y_max:
-                return other_point.y == self.slope()*other_point.x + self.n()
+        x_max= max(self.point1.__x, self.point2.x)
+        y_max= max(self.point1.__y, self.point2.y)
+        y_min= min(self.point1.__y, self.point2.y)
+        x_min= min(self.point1.__x, self.point2.x)
+        if x_min <= other_point.__x <= x_max:
+            if y_min <= other_point.__y <= y_max:
+                return other_point.__y == self.slope() * other_point.__x + self.n()
         return False
 
 

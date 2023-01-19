@@ -12,8 +12,8 @@ class Point():
         return f"({self.x},{self.y})"
 
     def distance(self, other_point):
-        x_s= (self.x-other_point.x)**2
-        y_s= (self.y- other_point.y)**2
+        x_s= (self.x - other_point.__x) ** 2
+        y_s= (self.y - other_point.__y) ** 2
         return math.sqrt(x_s+y_s)
 
 class Line():
@@ -26,21 +26,21 @@ class Line():
         self.point2=point2
 
     def a(self):
-        return (self.point1.y-self.point2.y)/(self.point1.x-self.point2.x)
+        return (self.point1.__y - self.point2.__y) / (self.point1.__x - self.point2.__x)
     def b(self):
-        return self.point1.y-(self.a()*self.point1.x)
+        return self.point1.__y - (self.a() * self.point1.__x)
 
     def __repr__(self):
         return f"y={self.a()}x+{self.b()}"
 
     def is_on_line(self,point):
-        x_min= min(self.point1.x, self.point2.x)
-        y_min= min(self.point1.y, self.point2.y)
-        y_max= max(self.point1.y, self.point2.y)
-        x_max= max(self.point1.x, self.point2.x)
-        if x_min <= point.x <= x_max:
-            if y_min <= point.y <= y_max:
-                return point.y == (self.a()*point.x )+ self.b()
+        x_min= min(self.point1.__x, self.point2.__x)
+        y_min= min(self.point1.__y, self.point2.__y)
+        y_max= max(self.point1.__y, self.point2.__y)
+        x_max= max(self.point1.__x, self.point2.__x)
+        if x_min <= point.__x <= x_max:
+            if y_min <= point.__y <= y_max:
+                return point.__y == (self.a() * point.__x) + self.b()
         return False
 
 
