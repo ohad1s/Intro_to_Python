@@ -278,14 +278,15 @@ def orderTrucks(items,avg):  # [it-12 it-54 it-32] 20  , capa= 98 98/20= 4.9
         sum+=it.getVolume()
     return round(sum/avg)
 
-def loadTrucks(items, trucks):
+def loadTrucks(items:list, trucks):
+    items.sort(key=lambda x: x._volume) # not necessary but improve the answer
     numT=0
-    for item in items:
-        if (trucks[numT].capacity>=item.getVoulume()):
-            trucks[numT].load(item)
+    while len(items)>0:
+        if (trucks[numT].capacity>=items[0].getVoulume()):
+            trucks[numT].load(items[0])
+            items.pop(0)
         else:
             numT+=1
-    pass ############### ******************** ###################
 
 
 # f= open("bdika.txt","r")
