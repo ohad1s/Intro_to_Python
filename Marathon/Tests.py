@@ -314,13 +314,13 @@ splited_line= x[4].split(",")
 print(splited_line[2])
 
 def isPrime__(n,i):
-    if i==n-1:
+    if i==2:
         return not n%i==0
     else:
-        return isPrime__(n,i+1) and not n%i==0
+        return isPrime__(n,i-1) and not n%i==0
 
 def isPrime(n):
-    isPrime__(n,2)
+    isPrime__(n,n-1)
 
 def isPalindrome(my_str):
     if len(my_str)<2:
