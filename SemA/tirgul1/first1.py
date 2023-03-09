@@ -46,15 +46,15 @@ age_3=input("enter age")
 age_4=int(age_3)
 # print("your age+10"+ age_3+10)
 
-number1=input("enter both")
+number1=input("enter TA1")
 number2=input("enter second")
-print("both "+number1)
+print("TA1 "+number1)
 print("second "+number2)
 temp=number1
 number1=number2
 number2=temp
 number1, number2 = number2 , number1
-print("both "+number1)
+print("TA1 "+number1)
 print("second "+number2)
 print("Ciiii")
 

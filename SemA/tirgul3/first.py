@@ -1,5 +1,5 @@
 x=77
-mylist=["both", 45, True,x,"ohad" ]
+mylist=["TA1", 45, True,x,"ohad" ]
 print(mylist[-1])
 mylist.index(45)
 mylist.append("ohad2")
