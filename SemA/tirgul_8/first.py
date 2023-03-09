@@ -51,7 +51,7 @@ def map_square(mylist):
 
 #barbie.txt
 
-f= open("Barbie.txt","r")
+f= open("Barbie.txt", "r")
 lines=f.readlines()
 barbie_prices={}
 for i in range(1,len(lines)):

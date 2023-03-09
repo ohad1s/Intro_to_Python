@@ -77,7 +77,7 @@ def word_counter(file_name, word):
 #     f.write(my_word_list[x])
 #     f.write("\n")
 
-ohad_counter= word_counter("word.txt","Ohad")
+ohad_counter= word_counter("word.txt", "Ohad")
 print(ohad_counter)
 
 

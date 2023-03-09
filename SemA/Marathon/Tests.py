@@ -303,7 +303,7 @@ def loadTrucks(items:list, trucks):
 #     f.write("asdfghj")
 # # auto closed
 
-f= open("bdika.txt","r")
+f= open("bdika.txt", "r")
 x= f.readlines()
 print(x[4])
 f.close()

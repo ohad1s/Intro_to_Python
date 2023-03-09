@@ -1,7 +1,7 @@
 import csv
 # import math
 # print(math.sqrt(9))
-open_file = open('./results.csv',encoding="utf-8")
+open_file = open('results.csv', encoding="utf-8")
 # open_file = open(r'C:\Users\shira\PycharmProjects\SemsterA_22-23\tirgul_6\csv_reading.py')
 # games_dict= csv.DictReader(open_file)
 games= csv.reader(open_file)
