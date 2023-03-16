@@ -11,26 +11,26 @@
 # y="ohad"
 
  #5:
-# str1=input("please enter a string")
-# str2=input("please enter a string")
-# str3=str1[::2]+str2[1::2]
-# print(str3)
-# print(str[::-1])
+str1=input("please enter a string")
+str2=input("please enter a string")
+str3=str1[::2]+str2[1::2]
+print(str3)
+print(str[::-1])
 
  #11:
-# year= int(input("enter a year!"))
-# if year%4==0 and year%100!=0:
-#     print("Ciiiiii")
-# else:
-#     print("No")
+year= int(input("enter a year!"))
+if year%4==0 and year%100!=0:
+    print("Ciiiiii")
+else:
+    print("No")
 #
 #12:
-# avg=int(input("enter a avg"))
-# psycho=int(input("enter a psycho grade"))
-# if avg>=85 or psycho>=600:
-#     print("Welcome!")
-# else:
-#     print("good bye!")
+avg=int(input("enter a avg"))
+psycho=int(input("enter a psycho grade"))
+if avg>=85 or psycho>=600:
+    print("Welcome!")
+else:
+    print("good bye!")
 
 #24:
 price=20
