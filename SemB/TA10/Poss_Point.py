@@ -37,6 +37,9 @@ class Pos_Point():
         y= self.y+other.y
         return Pos_Point(x,y)
 
+    def __lt__(self, other):
+        return self.__x < other.get_x()
+
 p1=Pos_Point(5, 3)
 p2=Pos_Point(1, 1)
 p3=Pos_Point()
@@ -70,3 +73,8 @@ new_p=p1+p2
 print(p1)
 print(p2)
 print(new_p)
+
+if p1<p2:
+    print("p1")
+else:
+    print("p2")
