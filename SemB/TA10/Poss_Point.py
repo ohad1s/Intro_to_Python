@@ -40,13 +40,27 @@ class Pos_Point():
     def __lt__(self, other):
         return self.__x < other.get_x()
 
+    def __mul__(self, other):
+        x=self.__x*other.get_x()
+        y=self.y*other.y
+        return Pos_Point(x,y)
+
+    def __gt__(self,other):
+        return self.__x > other.get_x()
+
+
+
+
+
 p1=Pos_Point(5, 3)
-p2=Pos_Point(1, 1)
+p2=Pos_Point(3, 2)
 p3=Pos_Point()
 # p4=Pos_Point(-1,-7) - Error!
 print(p1)
 print(p3)
 # print(p4)
+
+
 
 
 
@@ -78,3 +92,20 @@ if p1<p2:
     print("p1")
 else:
     print("p2")
+
+x=5*5
+print(p1)
+print(p2)
+new_pp=p1*p2
+print(new_pp)
+
+
+if p1>p2:
+    print("p1")
+else:
+    print("p2")
+
+
+
+
+
