@@ -32,6 +32,11 @@ class Pos_Point():
         if val<0:
             raise ValueError("This is a positive point!")
 
+    def __add__(self, other):
+        x=self.__x+other.get_x()
+        y= self.y+other.y
+        return Pos_Point(x,y)
+
 p1=Pos_Point(5, 3)
 p2=Pos_Point(1, 1)
 p3=Pos_Point()
@@ -40,8 +45,12 @@ print(p1)
 print(p3)
 # print(p4)
 
+
+
 p1.change_color("Blue")
 p2.change_color("Red")
+
+
 
 print(p1)
 print(p2)
@@ -56,3 +65,8 @@ print(p1.get_x())
 # p1.set_x(-77)
 p1.set_x(23)
 print(p1)
+
+new_p=p1+p2
+print(p1)
+print(p2)
+print(new_p)
