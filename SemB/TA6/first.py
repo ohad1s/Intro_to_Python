@@ -82,13 +82,24 @@ print(reduce("xxxxaaabbyyyy"))
 
 
 def isPrime(x):
-    pass
+    if x==1:
+        return False
+    if x==2:
+        return True
+    for i in range(3,x):
+        if x%i==0:
+            return False
+    return True
 
 def marsanePrime(x):
     if not isPrime(x):
         return False
-    for i in range(1,int(math.sqrt(x))):
+    for i in range(1,int(math.sqrt(x))+2):
+        print(i)
         if 2**i == x+1:
             return True
     return False
+
+print(isPrime(3))
+print(marsanePrime(3))
 
