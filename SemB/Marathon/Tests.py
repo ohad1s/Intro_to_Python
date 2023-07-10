@@ -379,10 +379,8 @@ def suffix(lst,k):
 def suffix_prefix(lst,k):
     dict1=suffix(lst,k)
     for i , s in enumerate(lst):
-        pref=s[:k]
-        curr_lst=dict1.get(pref,[])
-        if len(curr_lst)>0:
-            if len(curr_lst)==1:
-                if curr_lst[0]!=i:
+        if s[:k] in dict1.keys():
+            for j in dict1[s[:k]]:
+                if i!=j:
                     return True
-            return True
+    return False
