@@ -6,9 +6,10 @@ tup.index(True)
 # ---------------------
 lst2=["ohad",25,"Ariel"]
 dicti={"name":"ohad","age":25,"city":"Ariel",1:True}
-# dicti2={"lst":[1,3,4],"dicti":{dicti}}
+dicti2={"lst":[1,3,4],"dicti":dicti}
 
 dicti[1]=False
+# print(dicti[0])
 dicti[0]=True
 # val= dicti[3]
 # print(dicti[0])
@@ -36,6 +37,6 @@ print(keys)
 values=dicti.values()
 print(values)
 # x1=dicti["name"]
-x2=dicti.get("a",0)
+x2=dicti.get("last_name",1)
 print(x2)
 # -------------------------------
