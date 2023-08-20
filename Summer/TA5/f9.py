@@ -52,7 +52,7 @@ def create_menu(dishes, prices)->dict :
         dicti[d]=p
     return dicti
 
-dishes = ['Pad-Tai Chicken', 'Fish & Fries' , 'Ice scream waffle']
+dishes = ['Pad-Tai Chicken', 'Fish & Fries' , 'Ice cream waffle']
 prices = [75.0, 60.0, 45.0]
 
 dishes_d=create_menu(dishes,prices)
@@ -69,17 +69,12 @@ def save_menu_orig(menu,filename):
 save_menu_orig(dishes_d,"menu2.csv")
 
 
-
-
-
-
-
 def save_menu(menu,filename):
     with open(filename+".csv","w") as myfile:
         myfile.write("dish,price,curr\n")
         for d, p in menu.items():
             myfile.write(f"{d},{p},NIS\n")
-d={'Pad-Tai Chicken': 75.0, 'Fish & Fries': 60.0, 'Ice scream waffle': 45.0}
+d={'Pad-Tai Chicken': 75.0, 'Fish & Fries': 60.0, 'Ice cream waffle': 45.0}
 save_menu(d,"my_menu")
 
 
