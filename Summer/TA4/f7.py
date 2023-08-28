@@ -59,12 +59,13 @@ def q1_aviv_b23(string , n)->str:
 # print(q1_aviv_b23("abcdefg",2))
 
 # -----------------------------
-# f=open("bdika.txt","a")
-# f.write("\n")
-# f.write("hello")
-# f.close()
+f=open("bdika.txt","a")
+f.write("\n")
+f.write("hello")
+f.close()
 
-with open("bdika.txt","r") as f:
+myfile="bdika.txt"
+with open(myfile,"r") as f:
     # r= f.read()
     # print(r)
     # r2= f.readline()
@@ -100,6 +101,7 @@ def cycle_char(char,num):
 
 
 print(cycle_char("z",1))
-
-
+g=2
+lst3 = [1,5,7] +[g]
+print(lst3)
 

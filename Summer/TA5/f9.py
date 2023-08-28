@@ -11,7 +11,7 @@ for i,row in enumerate(games_data):
         for index,elem in enumerate(row):
             header[elem]=index
         print(header)
-    if row[header["home_team"]]=="Israel" or row[header["away_team"]]=="Israel":
+    elif row[header["home_team"]]=="Israel" or row[header["away_team"]]=="Israel":
         counter_israel_games+=1
 print(f"Israel played {counter_israel_games} games")
 # ------------------------------------------------------------
@@ -24,7 +24,7 @@ for i,row in enumerate(games_data):
         counter_israel_goals+=int(row[header["home_score"]])
     elif row[header["away_team"]]=="Israel":
         counter_israel_goals+=int(row[header["away_score"]])
-print(f"Israel played {counter_israel_goals} games")
+print(f"Israel scored {counter_israel_goals} goals")
 # ------------------------------------------------------------
 counter_goals={}
 for i,row in enumerate(games_data):
