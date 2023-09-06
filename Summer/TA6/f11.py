@@ -26,5 +26,10 @@ def min_lst_rec(lst):
     else:
         return first
 
-
-
+print(0%10)
+print(9%10)
+lst=[1,2]
+lst.insert(0,7)
+print(lst)
+lst=[1,2,3]+[4,6]
+print((1,2,3)+(4,5))
