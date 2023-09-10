@@ -31,6 +31,11 @@ class Positive_Point:
             raise TypeError("...")
         return ((self.__x-other_point.getX())**2 + (self.__y-other_point.getY())**2)**0.5
 
+    def __add__(self, other):
+        new_x=self.__x+other.getX()
+        new_y= self.__y+other.getY()
+        return Positive_Point(new_x,new_y)
+
 
 # class line:
 #
@@ -38,12 +43,6 @@ class Positive_Point:
 #         self.p1=p1
 #         self.p2=p2
         # etc....
-
-
-
-
-
-
 
 
 p1=Positive_Point()
@@ -66,6 +65,12 @@ p3.setY(17)
 print(p3)
 dist=p1.distance(p3)
 print(dist)
+print(5+7)
+print("=========")
+print(p1)
+print(p2)
+print(p1+p2)
+
 
 #
 # def add(a,b):
