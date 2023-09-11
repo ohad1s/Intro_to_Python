@@ -51,3 +51,8 @@ def reverse_phrase2(string)-> str :
     return " ".join(lst)
 
 print(reverse_phrase("I love py"))
+
+lst1=[1,2,3]
+str_lst= str(lst1)
+print(str_lst)
+

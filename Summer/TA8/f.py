@@ -21,10 +21,14 @@ class Student(Person):
         self.University=University
         Student.serial_number+=1
         self.serial_num=Student.serial_number
-        self.my_skills=Student.skills.copy()
+        self.__my_skills=Student.skills.copy()
 
     def add_skill(self,new_skill):
-        self.my_skills.append(new_skill)
+        self.__my_skills.append(new_skill)
+
+    def copy(self):
+        return Student(self.name,self.age,self.id,self.University)
+
 
 #
 s1= Student("ohad",26,123456789,"Ariel")
@@ -52,5 +56,8 @@ print(s1.my_skills)
 s1.add_skill("py")
 print(s1.my_skills)
 print(Student.skills)
+s7= Student("ohad",26,123456789,"Ariel")
+s8=s7.copy()
+
 
 

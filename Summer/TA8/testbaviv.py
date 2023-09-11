@@ -24,5 +24,9 @@ class LaserGun(Gun):
 
 gun=Gun()
 print(gun.fire())
+l=LaserGun("black")
+print(type(l)==Gun)
+print(isinstance(l,Gun))
+print([1,2,3]+[4,5,6])
 
 

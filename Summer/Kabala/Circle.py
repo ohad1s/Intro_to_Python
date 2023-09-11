@@ -35,6 +35,9 @@ class Circle:
     def are_same_area(self,other_circle):
         return self.area()==other_circle.area()
 
+    def are_the_same_radius(self,other):
+        return self.__radius==other.get_radius()
+
     def check_values(self,other_circle):
         print(self.__radius)
         print(other_circle.get_radius())
@@ -55,6 +58,11 @@ c1.set_radius(200)
 print(c1.get_radius())
 print(c1)
 print(type(c1))
+c1.are_the_same_radius(c2)
+c2.set_radius(7)
+c7=Circle(3,3,3)
+
+
 
 
 
