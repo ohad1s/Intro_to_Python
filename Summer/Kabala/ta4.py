@@ -27,7 +27,7 @@ print(f(poly1,x))
 
 def create_menu(dishes, prices)->dict :
     if len(dishes)!=len(prices):
-        print("Error!")
+        raise ValueError("Error!")
     else:
         new_dict={}
         for i in range(len(dishes)):
@@ -51,8 +51,4 @@ def reverse_phrase2(string)-> str :
     return " ".join(lst)
 
 print(reverse_phrase("I love py"))
-
-lst1=[1,2,3]
-str_lst= str(lst1)
-print(str_lst)
 
