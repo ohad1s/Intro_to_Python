@@ -31,6 +31,8 @@ class Robot:
 
     def lose_battery(self,num):
         self.__battery-=num
+        if self.__battery<0:
+            self.__battery=0
 
     def fight(self,other):
         if self.__battery>other.getBattery():
